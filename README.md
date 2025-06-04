@@ -29,7 +29,7 @@ acesso por um administrador.</p>
 <p>Após o desenvolvimento do software deverá ser realizada a migração dos dados
 da planilha em excel para a base de dados do novo sistema.</p>
 
-<ol><li>Etapas do projeto: <li>
+<ol><li>Etapas do projeto:</li>
 <ul>
 <li>Casos de Uso</li>
 <li>Classes</li>
