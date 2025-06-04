@@ -1,5 +1,5 @@
 # software-para-gestao-de-despesas
-Projeto 1 – Software para gestão de despesas
+<h2>Projeto 1 – Software para gestão de despesas</h2>
 
 <p>O cliente XYZ atualmente utiliza uma planilha em excel para gerir as despesas da
 empresa, o que gera descontrole, erros de lançamentos, problemas de
