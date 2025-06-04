@@ -1,4 +1,4 @@
-# software-para-gest-o-de-despesas
+# software-para-gestao-de-despesas
 Projeto 1 – Software para gestão de despesas
 
 <p>O cliente XYZ atualmente utiliza uma planilha em excel para gerir as despesas da
