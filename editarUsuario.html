@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editar Usuário</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      max-width: 300px;
+      padding: 6px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      margin-top: 12px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    hr {
+      margin: 30px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====== Menu de navegação ======
+       Integre aqui o seu menu (por exemplo, via include de outro HTML/JS ou componente da sua framework) -->
+  <!-- Exemplo: <div id="menu">{{> menu }}</div> -->
+
+  <h1>Editar Usuário</h1>
+
+  <!-- ====== Formulário de edição ======
+       Substitua {{ user.id }}, {{ user.nome }}, etc. pela sua sintaxe/template engine -->
+  <form method="POST" action="salvarUsuario.php?editar&id={{ user.id }}">
+    <label for="txtNome">Nome completo:</label>
+    <input id="txtNome" type="text" name="txtNome" value="{{ user.nome }}" required/>
+
+    <label for="txtEmail">E-mail:</label>
+    <input id="txtEmail" type="text" name="txtEmail" value="{{ user.email }}" required/>
+
+    <label for="txtUsername">Username:</label>
+    <input id="txtUsername" type="text" name="txtUsername" value="{{ user.username }}" required/>
+
+    <label for="txtSenha">Nova Senha:</label>
+    <input id="txtSenha" type="password" name="txtSenha" placeholder="Insira a nova senha (opcional)"/>
+
+    <label for="txtCelular">Celular:</label>
+    <input id="txtCelular" type="text" name="txtCelular" value="{{ user.celular }}"/>
+
+    <input type="submit" value="Salvar Alterações"/>
+  </form>
+
+  <hr/>
+
+  <h2>Deletar conta de usuário</h2>
+  <!-- ====== Formulário de exclusão ======
+       Geralmente você quer uma confirmação extra antes de enviar -->
+  <form method="POST" action="salvarUsuario.php?excluir&id={{ user.id }}">
+    <input type="submit" value="Excluir Conta" onclick="return confirm('Deseja realmente excluir sua conta?');"/>
+  </form>
+
+</body>
+</html>

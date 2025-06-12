@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Logout</title>
+    <meta http-equiv="refresh" content="2;url=../index.html">
+    <script>
+        // Simula limpeza de sessão (exemplo, se usar localStorage ou cookies)
+        localStorage.clear();
+        // Redirecionamento manual com fallback
+        setTimeout(() => {
+            window.location.href = "../index.html";
+        }, 2000);
+    </script>
+</head>
+<body>
+    <p>Encerrando sua sessão... Redirecionando para a página inicial.</p>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADASTRO CREDORES</title>
+</head>
+
+<body>
+    <br>
+
+    <!-- Aqui estaria o menu, normalmente incluso por PHP -->
+    <!-- Exemplo: require_once('menu.php'); -->
+    <nav>
+        <!-- Menu de navegação (substituir pelo conteúdo real do arquivo menu.php) -->
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Cadastrar Credor</a></li>
+        </ul>
+    </nav>
+
+    <h1>Cadastrar CREDORES:</h1>
+
+    <form method="POST" action="salvarCredores.php?inserir">
+        <label>Nome:</label>
+        <input type="text" placeholder="Insira o nome do credor..." name="txtNome" />
+        <br><br>
+        <input type="submit" value="Salvar" />
+        <input type="reset" value="Limpar" />
+    </form>
+    <br>
+    <hr>
+
+    <!-- Aqui seria exibido o conteúdo dinâmico com PHP -->
+    <!-- Substituído por conteúdo de exemplo -->
+
+    <table border="2">
+        <caption>Credores cadastrados</caption>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+        </tr>
+        <!-- Exemplo de linha de credor cadastrada -->
+        <tr>
+            <td>1</td>
+            <td>João da Silva</td>
+            <td><a href="editarCredores.php?id=1"><button>Editar</button></a></td>
+            <td><a onclick="return confirm('Você tem certeza que deseja apagar?')" href="salvarCredores.php?excluir&id=1">
+                <button>Excluir</button></a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Maria Oliveira</td>
+            <td><a href="editarCredores.php?id=2"><button>Editar</button></a></td>
+            <td><a onclick="return confirm('Você tem certeza que deseja apagar?')" href="salvarCredores.php?excluir&id=2">
+                <button>Excluir</button></a></td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <h3>Foram cadastrados 2 credores até 11/06/2025</h3>
+
+    <!-- Simulação de mensagens de alerta -->
+    <script>
+        // Exemplo: alertas simulados
+        // alert("O campo nome não pode ser vazio!");
+        // alert("Credor João da Silva cadastrado com sucesso!");
+        // alert("Credor excluído com sucesso!");
+        // alert("Credor editado com sucesso!");
+    </script>
+
+</body>
+
+</html>

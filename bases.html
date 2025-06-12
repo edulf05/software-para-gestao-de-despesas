@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CADASTRO BASES</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    button {
+      padding: 6px 12px;
+      margin-right: 4px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    hr {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====== Controle de acesso ======
+       Aqui você deve usar sua lógica (PHP, JS ou template engine) 
+       para redirecionar ou ocultar este conteúdo se o usuário não estiver logado. -->
+
+  <h1>Cadastrar BASES FÍSICAS:</h1>
+
+  <form method="POST" action="salvarBases.php?inserir">
+    <label for="txtNome">Nome:</label>
+    <input id="txtNome" type="text" name="txtNome" placeholder="Insira o nome da base..." required />
+    <br/><br/>
+    <input type="submit" value="Salvar" />
+    <input type="reset" value="Limpar" />
+  </form>
+
+  <hr/>
+
+  <!-- ====== Listagem de Bases ====== -->
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--
+        Exemplo de loop (substitua pela sintaxe da sua template engine):
+
+        {% for base in bases %}
+        <tr>
+          <td>{{ base.id }}</td>
+          <td>{{ base.nome }}</td>
+          <td>
+            <a href="editarBases.php?id={{ base.id }}">
+              <button>Editar</button>
+            </a>
+            <a href="salvarBases.php?excluir&id={{ base.id }}"
+               onclick="return confirm('Deseja realmente excluir?');">
+              <button>Excluir</button>
+            </a>
+          </td>
+        </tr>
+        {% endfor %}
+      -->
+    </tbody>
+  </table>
+
+  <hr/>
+
+  <!-- ====== Contador de registros ====== -->
+  <h3>
+    Foram cadastradas <strong>{{ bases_count }}</strong> bases até
+    <strong>{{ current_date }}</strong>
+  </h3>
+
+  <!-- ====== Alertas ======
+       Substitua por sua lógica (pode ser em PHP, JS, ou template) -->
+  <script>
+    // if (nomeVazio)      alert('O campo nome não pode ser vazio!');
+    // if (nome)           alert('Base ' + nome + ' cadastrada com sucesso!');
+    // if (BaseExcluida)   alert('Base excluída com sucesso!');
+    // if (baseEditada)    alert('Base editada com sucesso!');
+  </script>
+
+</body>
+</html>
