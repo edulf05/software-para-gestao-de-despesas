@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <style>
+        /* Estilos básicos para alinhamento */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        nav a {
+            margin-right: 10px;
+        }
+        button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ======= Se o usuário estiver logado ======= -->
+<div id="menu-logado">
+    <!-- Substitua NOME_DO_USUARIO pela variável / template engine que preferir -->
+    <p>Olá <strong>NOME_DO_USUARIO</strong></p>
+    <br>
+
+    <nav>
+        <a href="credores.html">
+            <button>Credores</button>
+        </a>
+
+        <a href="bases.html">
+            <button>Bases</button>
+        </a>
+
+        <a href="despesas.html">
+            <button>Despesas</button>
+        </a>
+
+        <a href="lancamentos.html">
+            <button>Lançamentos</button>
+        </a>
+
+        <a href="editarUsuario.html">
+            <button>Editar Usuário</button>
+        </a>
+
+        <a href="sair.html">
+            <button>Sair</button>
+        </a>
+    </nav>
+</div>
+
+<!-- ======= Se o usuário NÃO estiver logado ======= -->
+<div id="login-form">
+    <form action="login_efetuado.html" method="POST">
+        <input
+                type="text"
+                name="txtLogin"
+                placeholder="Login:"
+                required
+        />
+        <br><br>
+        <input
+                type="password"
+                name="txtSenha"
+                placeholder="Senha:"
+                required
+        />
+        <br><br>
+        <input type="submit" value="Entrar" />
+    </form>
+</div>
+
+</body>
+</html>
+
